@@ -14,7 +14,7 @@ post '/' do
 	@message = "Dear #{@user_name}, we'll be waiting for you at #{@date_time}"
 
 
-	f = File.open"users.txt", "a"
+	f = File.open"./public/users.txt", "a"
 	f.write "User: #{@user_name}, Phone: #{@phone}, Date and Time: #{@date_time}"
 	f.close
 	erb :message
